@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+ 
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 32%;
+ 
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+ 
+    --accent: 210 90% 95%;
+    --accent-foreground: 210 100% 35%;
+ 
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 92%;
+    --input: 0 0% 90%;
+    --ring: 210 100% 40%;
+ 
+    --radius: 0.3rem;
+
+    --chart-1: 210 100% 45%;
+    --chart-2: 170 90% 40%;
+    --chart-3: 35 90% 50%;
+    --chart-4: 330 90% 45%;
+    --chart-5: 260 90% 40%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 210 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 95%;
+    --sidebar-accent-foreground: 210 100% 35%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 210 100% 40%;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+ 
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 16%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 0 0% 24%;
+    --secondary-foreground: 0 0% 96%;
+ 
+    --muted: 0 0% 24%;
+    --muted-foreground: 0 0% 64%;
+ 
+    --accent: 210 100% 20%;
+    --accent-foreground: 210 100% 80%;
+ 
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 210 100% 50%;
+
+    --chart-1: 210 100% 55%;
+    --chart-2: 170 90% 50%;
+    --chart-3: 35 90% 60%;
+    --chart-4: 330 90% 55%;
+    --chart-5: 260 90% 50%;
+
+    --sidebar-background: 0 0% 16%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 100% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 24%;
+    --sidebar-ring: 210 100% 60%;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  /* 테마 컬러: Google Blue */
+  .theme-blue {
+    --primary: 210 100% 40%;
+    --accent: 210 90% 95%;
+    --accent-foreground: 210 100% 35%;
+    --ring: 210 100% 40%;
+    --sidebar-primary: 210 100% 40%;
+    --sidebar-accent: 210 90% 95%;
+    --sidebar-accent-foreground: 210 100% 35%;
+  }
+
+  /* 테마 컬러: Google Red */
+  .theme-red {
+    --primary: 4 90% 45%;
+    --accent: 4 90% 95%;
+    --accent-foreground: 4 90% 45%;
+    --ring: 4 90% 45%;
+    --sidebar-primary: 4 90% 45%;
+    --sidebar-accent: 4 90% 95%;
+    --sidebar-accent-foreground: 4 90% 45%;
+  }
+
+  /* 테마 컬러: Google Green */
+  .theme-green {
+    --primary: 122 60% 40%;
+    --accent: 122 60% 95%;
+    --accent-foreground: 122 60% 40%;
+    --ring: 122 60% 40%;
+    --sidebar-primary: 122 60% 40%;
+    --sidebar-accent: 122 60% 95%;
+    --sidebar-accent-foreground: 122 60% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Google Material Design 스타일 개선 */
+  h1 {
+    @apply text-2xl font-normal tracking-tight text-foreground mb-6;
+  }
+
+  h2 {
+    @apply text-xl font-normal tracking-tight text-foreground mb-4;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-normal tracking-tight text-foreground;
+  }
+
+  /* 구글 스타일 카드 효과 */
+  .material-card {
+    @apply bg-card rounded-md p-4 transition-all duration-200 border border-border shadow-[var(--shadow)] hover:shadow-[var(--shadow-md)];
+  }
+
+  /* 강조 효과 */
+  .material-ripple {
+    @apply relative overflow-hidden;
+  }
+  
+  /* 버튼 스타일 */
+  .material-button {
+    @apply rounded-full px-6 py-2 font-medium text-sm transition-all duration-200 flex items-center justify-center;
+  }
+
+  /* 애니메이션 효과 */
+  .fade-in {
+    @apply opacity-0 animate-[fadeIn_0.3s_ease-out_forwards];
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 반응형 그리드 시스템 */
+  .material-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+  }
+
+  /* 네비게이션 */
+  .nav-item {
+    @apply flex items-center px-4 py-2 gap-2 text-sm text-sidebar-foreground rounded-full transition-colors duration-200;
+  }
+  
+  .nav-item-active {
+    @apply bg-sidebar-accent text-primary font-medium;
+  }
+  
+  /* 구글 스타일 그림자 */
+  .shadow-elevation-1 {
+    box-shadow: var(--shadow);
+  }
+  
+  .shadow-elevation-2 {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-elevation-3 {
+    box-shadow: var(--shadow-lg);
+  }
+}
